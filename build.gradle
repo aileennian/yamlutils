@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    //guavaVersion="29.0-jre"
+    snakeyamlVersion="1.26"
+    junitVersion="4.12"
+    commonsLoggingVersion="1.2"
+}
+
+dependencies {
+    implementation "commons-logging:commons-logging:${commonsLoggingVersion}"
+    apiElements "org.yaml:snakeyaml:${snakeyamlVersion}"
+    testCompile "junit:junit:${junitVersion}"
+}
